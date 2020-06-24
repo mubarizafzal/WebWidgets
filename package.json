@@ -1,0 +1,25 @@
+{
+  "name": "learningagain",
+  "version": "1.0.0",
+  "description": "learning never stops",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "learn",
+    "gulp"
+  ],
+  "author": "Mubariz",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "gulp": "^4.0.2",
+    "sass": "^1.26.5"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.7"
+  }
+}
