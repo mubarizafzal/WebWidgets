@@ -7,8 +7,6 @@
 // npx babel --watch public/js/index.js --out-file public/js/main.js --presets=@babel/preset-env
 // gulp
 
-// can put last three commands into a sell? multithread?
-
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 
