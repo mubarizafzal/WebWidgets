@@ -17,7 +17,6 @@ if (process.argv.length > 2) {
   arg = process.argv[2].slice(2);
   arg += '/';
 }
-console.log(arg);
 
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
@@ -32,7 +31,7 @@ function server () {
   browserSync.init({
     notify: false,
     server: {
-      baseDir: "./public"
+      baseDir: `./public/${arg}`
     }
   });
 

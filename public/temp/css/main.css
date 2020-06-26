@@ -323,7 +323,7 @@ template {
       cursor: pointer;
       position: relative;
       padding: 12px 8px 12px 40px;
-      background: #eaa5ed;
+      background: #46d58e;
       font-size: 18px;
       transition: 0.2s;
       /* make the list items unselectable */
@@ -332,7 +332,7 @@ template {
       -ms-user-select: none;
       user-select: none; }
       .todo-list ul li:nth-child(odd) {
-        background: #e07be4; }
+        background: #2bbd74; }
     .todo-list ul li.checked {
       background: #b1b1b1;
       color: #fff;
