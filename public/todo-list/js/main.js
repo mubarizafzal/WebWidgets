@@ -6,7 +6,7 @@
 // - list of available pages
 // - home page with full list of widgets
 // - "previous home next" at top of widget page
-var myNodelist = document.getElementsByTagName("LI");
+var myNodelist = document.getElementById("todo-ul").getElementsByTagName("LI");
 var i;
 
 for (i = 0; i < myNodelist.length; i++) {

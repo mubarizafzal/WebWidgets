@@ -7,13 +7,25 @@
 // npx babel --watch public/js/index.js --out-file public/js/main.js --presets=@babel/preset-env
 // gulp
 
+// accept 0 or 1 parameters
+// /public/{var}index.html
+// var can be "todo-list" or "calendar"
+// for build.sh, it contains gulp command as well
+
+var arg = '';
+if (process.argv.length > 2) {
+  arg = process.argv[2].slice(2);
+  arg += '/';
+}
+console.log(arg);
+
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 
 function watch () {
-  gulp.watch("./public/index.html").on("change", browserSync.reload);
-  gulp.watch("./public/js/main.js").on("change", browserSync.reload);
-  gulp.watch("./public/css/main.css").on("change", browserSync.reload);
+  gulp.watch(`./public/${arg}index.html`).on("change", browserSync.reload);
+  gulp.watch(`./public/${arg}js/main.js`).on("change", browserSync.reload);
+  gulp.watch(`./public/${arg}css/main.css`).on("change", browserSync.reload);
 }
 
 function server () {
@@ -24,9 +36,9 @@ function server () {
     }
   });
 
-  gulp.watch("./public/index.html").on("change", browserSync.reload);
-  gulp.watch("./public/js/main.js").on("change", browserSync.reload);
-  gulp.watch("./public/css/main.css").on("change", browserSync.reload);
+  gulp.watch(`./public/${arg}index.html`).on("change", browserSync.reload);
+  gulp.watch(`./public/${arg}js/main.js`).on("change", browserSync.reload);
+  gulp.watch(`./public/${arg}css/main.css`).on("change", browserSync.reload);
 }
 
 var build = gulp.series(server, watch);
