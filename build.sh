@@ -1,7 +1,10 @@
 arg=''
-if test $1
+if test -d "public/${1}"
 then
   arg="${1}/"
+else
+  echo $0: argument must be a directory
+  exit 1
 fi
 
 if test -f "public/${arg}css/style.scss"
