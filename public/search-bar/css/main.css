@@ -312,7 +312,7 @@ template {
   margin: auto; }
 
 p {
-  padding: 30px; }
+  padding: 35px; }
 
 .header-nav {
   overflow: hidden;
@@ -323,9 +323,10 @@ p {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 20px;
   text-decoration: none;
-  font-size: 17px; }
+  font-size: 20px;
+  font-weight: bold; }
 
 .header-nav a:hover {
   background-color: #ddd;
@@ -333,11 +334,11 @@ p {
 
 .header-nav input[type=text] {
   float: right;
-  padding: 6px;
+  padding: 12px;
   border: none;
   margin-top: 8px;
   margin-right: 16px;
-  font-size: 17px; }
+  font-size: 20px; }
 
 @media screen and (max-width: 600px) {
   .header-nav a, .header-nav input[type=text] {

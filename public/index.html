@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <style type="text/css">
-      body {
+      #container {
         width: 80%;
         margin: auto;
         font-family: monospace;
@@ -13,12 +13,20 @@
       a {
         font-size: 20px;
       }
+      #widget-list {
+        display: flex;
+        flex-direction: column;
+      }
     </style>
   </head>
   <body>
     <div id="container">
-      <h1>List of widgets:</h1>
-      <a href="/todo-list/index.html">Todo List</a>
+      <div id="widget-list">
+        <h1>List of widgets:</h1>
+        <a href="/todo-list/index.html">Todo List</a>
+        <a href="/search-bar/index.html">Search Bar</a>
+        <a href="/calendar/index.html">Calendar</a>
+      </div>
     </div>
   </body>
 </html>
