@@ -1,5 +1,3 @@
-"use strict";
-
 // TODO:
 // - get elements by class name todo li, specific use
 // - change between pages
