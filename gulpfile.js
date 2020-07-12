@@ -31,7 +31,7 @@ function server () {
   browserSync.init({
     notify: false,
     server: {
-      baseDir: `./public/${arg}`
+      baseDir: `./public/`
     }
   });
 
