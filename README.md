@@ -11,3 +11,4 @@ TODO:
   - fix search bar features
   - update search bar functionality
   - remove babel compiler entirely?
+  - work
