@@ -2,6 +2,7 @@
 
 Current list of widgets:
   - ToDo List [Complete]
+  - Google Maps Form [In Progress]
   - Search Bar [In Progress]
   - Slideshow [In Progress]
   - Calendar [Unavailable]
