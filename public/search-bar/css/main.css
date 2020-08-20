@@ -303,6 +303,12 @@ template {
 [hidden] {
   display: none; }
 
+/*
+  - use mongodb to load data
+  - use jQuery to manipulate and search and filter
+  - if at least 2 characters
+  - title and content both
+*/
 * {
   font-family: monospace;
   font-size: 18px; }

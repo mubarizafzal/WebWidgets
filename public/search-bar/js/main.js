@@ -1,37 +1,31 @@
+
 console.log("ello");
 
-fetch('../img/3.jpg').then(response => {
-  console.log(response);
-  // this can contain a lot of different data, we move on with only the part we need, which is blob
-  return response.blob();
-}).then(blob => {
-  // response to the next promise
-  console.log(blob);
-  document.getElementById('image1').src = URL.createObjectURL(blob);
-  // we use the createObjectURL function to turn the blob into an acceptable url for the SRC property
+$("document").ready(function() {
+  $("#container").append("<p class='temp'>hello</p>");
+  $("#container").append("<p>hello</p>");
+  $("#container").append("<p>hello</p>");
+  $("#container").append("<p class='temp2'>hello</p>");
+    // also there is .prepend()
+    // adding a class name with single brackets and using it to affect the css in the next tag
+  
+  $(".temp").css("color", "red");
+  $("p:not(.temp)").css("color","blue");
+
+  $(".temp2").html("bye");
+  $(".temp2").html("<p>bye</p>");
+  $(".temp2").text("<p>bye</p>"); // now treated as plaintext
+    // replacing the html, retains the tag it is within and its class
+    
+  $("#container").append("<h3 class='clicker'>Click on the screen!</h3>");
+
+  $("document").ready(function () {
+    $("#container").on("click", doSome);
+  });
+
+  function doSome (evt) {
+    $(".clicker").html("<h3>I changed!</h3>");
+  }
+  
+
 });
-
-getPic2().catch(error => {
-  console.log('error!');
-  console.log(error);
-});
-
-async function getPic2() {
-  const response = await fetch('../img/2.jpg');
-  const blob = await response.blob();
-  var img = document.createElement("img");
-  img.src = URL.createObjectURL(blob);
-  img.width = 400;
-  document.getElementById('container').append(img);
-}
-
-/*
-  TODO:
-    - select where to search through: definitions, synonyms, examples
-    - write JS functionality
-    - use of vendor code??
-    - interact with YouTube API
-    - home, contact, about disappearing when other is selected, only one shown at a time
-    - right side has videos of silent watcher, search feature use for this
-
-*/
